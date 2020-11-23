@@ -4,7 +4,7 @@ export default class CreateCustomer1606050150429 implements MigrationInterface {
   public async up(queryRunner: QueryRunner): Promise<void> {
     await queryRunner.createTable(
       new Table({
-        name: 'customer',
+        name: 'customers',
         columns: [
           {
             name: 'id',
@@ -15,12 +15,11 @@ export default class CreateCustomer1606050150429 implements MigrationInterface {
           },
           {
             name: 'name',
-            type: 'varchar(100)',
-            isNullable: false,
+            type: 'varchar',
           },
           {
             name: 'email',
-            type: 'varchar(100)',
+            type: 'varchar',
             isNullable: false,
           },
           {
@@ -41,6 +40,6 @@ export default class CreateCustomer1606050150429 implements MigrationInterface {
   }
 
   public async down(queryRunner: QueryRunner): Promise<void> {
-    await queryRunner.dropTable('customer');
+    await queryRunner.dropTable('customers');
   }
 }
