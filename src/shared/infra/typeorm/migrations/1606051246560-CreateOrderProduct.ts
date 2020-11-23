@@ -31,12 +31,14 @@ export default class CreateOrderProduct1606051246560
           },
           {
             name: 'price',
-            type: 'double precision',
+            type: 'decimal',
+            scale: 2,
+            precision: 10,
             isNullable: false,
           },
           {
             name: 'quantity',
-            type: 'double precision',
+            type: 'int',
             isNullable: false,
           },
           {
